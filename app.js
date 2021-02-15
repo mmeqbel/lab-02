@@ -14,7 +14,7 @@ function Dog(name, img, desc,key) {
 
 Dog.prototype.render = function () {
   let section = $('.template').clone();
-  $('main').append(section);
+  $('.clearfix').append(section);
   section.find('h2').text(this.name);
   section.find('img').attr('src', this.img);
   section.find('p').text(this.descreption);
@@ -64,7 +64,7 @@ function renderKeywordsOption(array) {
         for (let index = 0; index < selectedSection.length; index++) {
             selectedSection[index].classList.remove('template');  
         }
-        console.log(sections);
+       
          
     }
     $('#keywords').on('change',clickHandler);
