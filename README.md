@@ -1,6 +1,6 @@
 # lab-02
 
-Number  of feature:3
+Number  of feature:display image,filter images ,style app ,3
 
 Estimate of time needed to complete: 3 hour
 
