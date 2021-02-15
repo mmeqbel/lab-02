@@ -55,17 +55,8 @@ function renderKeywordsOption(array) {
       });
       function clickHandler() {
         console.log(this.value);
-        $('section').find('option')
-        var ignordeSections=document.getElementsByTagName('section');
-        for (let index = 0; index < ignordeSections.length; index++) {
-            ignordeSections[index].classList.add('template');  
-        }
-        var selectedSection=document.getElementsByClassName(this.value);
-        for (let index = 0; index < selectedSection.length; index++) {
-            selectedSection[index].classList.remove('template');  
-        }
-       
-         
+        $('section').addClass('template');
+        $('.'+this.value).removeClass('template');     
     }
     $('#keywords').on('change',clickHandler);
       
