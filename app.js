@@ -14,7 +14,7 @@ function Dog(name, img, desc,key) {
 
 Dog.prototype.render = function () {
   let section = $('.template').clone();
-  $('main').append(section);
+  $('.clearfix').append(section);
   section.find('h2').text(this.name);
   section.find('img').attr('src', this.img);
   section.find('p').text(this.descreption);
@@ -55,17 +55,8 @@ function renderKeywordsOption(array) {
       });
       function clickHandler() {
         console.log(this.value);
-        $('section').find('option')
-        var ignordeSections=document.getElementsByTagName('section');
-        for (let index = 0; index < ignordeSections.length; index++) {
-            ignordeSections[index].classList.add('template');  
-        }
-        var selectedSection=document.getElementsByClassName(this.value);
-        for (let index = 0; index < selectedSection.length; index++) {
-            selectedSection[index].classList.remove('template');  
-        }
-        console.log(sections);
-         
+        $('section').addClass('template');
+        $('.'+this.value).removeClass('template');     
     }
     $('#keywords').on('change',clickHandler);
       

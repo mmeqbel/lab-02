@@ -1,0 +1,6 @@
+header,footer{
+    background-color: rgb(230, 80, 80);
+}
+section{
+    box-shadow: 5px 10px 18px #888888;
+}
