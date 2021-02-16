@@ -70,8 +70,6 @@ function renderKeywordsOption(url) {
       $('select').append(option);
     });
     function clickHandler() {
-      //console.log(this.value);
-
       if(this.value=="select filter") return;
       //bug
       $('section').addClass('template');
@@ -134,15 +132,16 @@ function renderFilterdPage(dogs,filter) {
     section.addClass(element.keyword);
     section.addClass("margin-lt-8");
     section.addClass("padding-ltr-8");
-    if (element.keyword!==filter) {
+    if (element.keyword!=filter) {
       section.addClass("template");
     }else{
+      console.log('else')
       section.removeClass("template");
     }
 
     section.append(element.render());
     $('.main-container').append(section);
-    $('section').addClass('template');
+    
     
   });
 }
