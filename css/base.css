@@ -1,5 +1,5 @@
 body{
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Lobster', cursive;
 }
 .margin-lt-8{
     margin-top: 8px;
@@ -11,7 +11,8 @@ body{
     padding-right: 8px;
 }
 h1{
-    font-size: 3vw;  
+    font-size: 4vw;
+    text-transform: uppercase;  
 }
 h2{
     font-size: 2vw;  
@@ -19,11 +20,11 @@ h2{
 p{
     font-size: 1vw;  
 }
-header{
-    line-height: 80px;
-    overflow: hidden;
-}
+
 section{
     font-size: 2vw;
     font-weight: bold;
+}
+.p-32{
+    padding: 32px;
 }
