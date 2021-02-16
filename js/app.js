@@ -71,7 +71,9 @@ function renderKeywordsOption(url) {
     });
     function clickHandler() {
       //console.log(this.value);
+
       if(this.value=="select filter") return;
+      //bug
       $('section').addClass('template');
       $('.' + this.value).removeClass('template');
     }
@@ -122,18 +124,26 @@ function sort(sortBy) {
   renderFilterdPage(dogs, filter);//depend on selected filter
 }
 function renderFilterdPage(dogs,filter) {
+  console.log('?')
   console.log(filter);
   console.log(dogs.length)
   $(".main-container").html('');  //remove sibilings
+
   dogs.forEach(element => {
-    if (element.keyword==filter) {
     var section = $('<section></section>');
     section.addClass(element.keyword);
     section.addClass("margin-lt-8");
     section.addClass("padding-ltr-8");
+    if (element.keyword!==filter) {
+      section.addClass("template");
+    }else{
+      section.removeClass("template");
+    }
+
     section.append(element.render());
     $('.main-container').append(section);
-  }
+    $('section').addClass('template');
+    
   });
 }
 /*exexutable*/
