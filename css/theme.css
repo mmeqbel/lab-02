@@ -1,6 +1,26 @@
 header,footer{
     background-color: rgb(230, 80, 80);
+    color: white;
 }
 section{
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: 5px 10px 18px rgb(230, 80, 80);
+    transition-duration: 5ms;
+    font-family: 'Lobster', cursive;   
+}
+
+button{
+    font-family: 'Lobster', cursive;
+    background-color: white;
+    color: black;
+    border: 1px black solid; 
+    transition-duration: 5ms;  
+}
+
+button:hover {
+    background-color: rgb(230, 80, 80);
+    color: white;
+}
+select,option{
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
 }
